@@ -6,3 +6,5 @@ Vue.use(Menu);
 Vue.use(Submenu);
 Vue.use(MenuItem);
 Vue.use(MenuItemGroup);
+
+import "@/assets/style/theme.less";

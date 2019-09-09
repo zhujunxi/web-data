@@ -1,5 +1,7 @@
 <template>
-	<div class="nav-bar">主题路径</div>
+	<div class="nav-bar">
+		<i class="iconfont icon-outdent"></i> 主题路径
+	</div>
 </template>
 
 <script>
