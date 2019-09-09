@@ -1,3 +1,3 @@
-module.export = {
-  baseUrl: process.env.NODE_ENV === "production" ? "/web-data/" : "/"
+module.exports = {
+  publicPath: process.env.NODE_ENV === "production" ? "/web-data/" : "/"
 };
