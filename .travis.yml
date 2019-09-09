@@ -19,9 +19,11 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: 680a4d758efb224347ad68ed5346492930ca5260 # Set in the settings page of your repository, as a secure variable
+  github_token: $GITHUB_ACCESS_TOKEN # Set in the settings page of your repository, as a secure variable
   keep_history: true
   email: 531578783@qq.com
+  target-branch: gh-pages
+  local-dir: dist
   on:
     branch: master
 # branches:
