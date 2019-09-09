@@ -4,7 +4,7 @@
 			<img src="@/assets/logo.png" alt srcset />\
 			<h1>Data System</h1>
 		</div>
-		<el-menu default-active="2" class="el-menu-vertical-demo">
+		<el-menu default-active="2" :collapse="false" class="el-menu-vertical-side">
 			<el-submenu index="1">
 				<template slot="title">
 					<i class="el-icon-location"></i>
@@ -53,8 +53,11 @@ export default {
 		font-size: 16px;
 	}
 }
-.el-menu-vertical-demo {
-	// background-color: #1b2b36;
-	color: #f0f0f0;
+.el-menu-vertical-side {
+	background-color: #1b2b36;
+	color: rgba(255, 255, 255, 1);
+	:hover {
+		background-color: #1b2b36;
+	}
 }
 </style>
