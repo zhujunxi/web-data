@@ -5,7 +5,7 @@
 			<div class="tool-item" v-for="item,index of toolData" :key="index">
 				<div class="tool-item-hd">{{item.label}}</div>
 				<div class="tool-item-bd">
-					<el-row :gutter="20">
+					<el-row :gutter="20" type="flex" justify="start">
 						<el-col :span="4" v-for="citem,cindex of item.resource" :key="cindex">
 							<template v-if="citem.link">
 								<a :href="citem.link" class="tool-cell" target="_blank">
@@ -111,10 +111,10 @@ export default {
 		width: 30px;
 		height: 30px;
 		border: 2px solid rgba(0, 0, 0, 0.04);
-		border-radius: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		border-radius: 50px;
+		line-height: 30px;
+		text-align: center;
+		flex-shrink: 0;
 		font-size: 16px;
 		font-weight: bold;
 		color: #fff;
