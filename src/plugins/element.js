@@ -6,7 +6,9 @@ import {
   MenuItem,
   MenuItemGroup,
   Row,
-  Col
+  Col,
+  Popover,
+  Tooltip
 } from "element-ui";
 
 Vue.use(Button);
@@ -16,5 +18,7 @@ Vue.use(MenuItem);
 Vue.use(MenuItemGroup);
 Vue.use(Row);
 Vue.use(Col);
+Vue.use(Popover);
+Vue.use(Tooltip);
 
 import "@/assets/style/theme.less";

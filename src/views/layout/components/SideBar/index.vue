@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="side-logo">
-			<img src="@/assets/logo.png" alt srcset />\
+			<img src="@/assets/logo.png" alt srcset />
 			<h1>Data System</h1>
 		</div>
 		<el-menu default-active="2" :collapse="false" class="el-menu-vertical-side">
