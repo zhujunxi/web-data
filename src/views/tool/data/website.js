@@ -39,7 +39,8 @@ module.exports = [
     label: "数据分析",
     resource: [
       {
-        name: ""
+        name: "飞瓜数据",
+        link: "https://www.feigua.cn/"
       }
     ]
   },
