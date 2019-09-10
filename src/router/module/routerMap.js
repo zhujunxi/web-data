@@ -34,6 +34,15 @@ export default [
   },
   {
     path: "/chrome-tool",
-    component: () => import("@/views/tool/index.vue")
+    component: () => import("@/views/tool/index.vue"),
+    children: [
+      {
+        path: "/chrome-tool",
+        meta: {
+          title: "chrome-工具导航",
+          hidden: true
+        }
+      }
+    ]
   }
 ];

@@ -5,18 +5,18 @@
 			<h1>Data System</h1>
 		</div>
 		<div class="md-menu">
-			<router-link
-				class="md-menu-item"
-				:class="{active: activePath == item.children[0].path}"
-				:to="item.children[0].path"
-				tag="div"
-				v-for="item,index of routerMap"
-				v-if="!item.children[0].meta.hidden"
-				:key="index"
-			>
-				<i :class="item.children[0].meta.icon"></i>
-				<span>{{item.children[0].meta.title}}</span>
-			</router-link>
+			<template v-for="item,index of routerMap">
+				<router-link
+					class="md-menu-item"
+					:class="{active: activePath == (item.children && item.children[0].path)}"
+					:to="item.children[0].path"
+					tag="div"
+					v-if="item.children && !item.children[0].meta.hidden"
+				>
+					<i :class="item.children && item.children[0].meta.icon"></i>
+					<span>{{item.children && item.children[0].meta.title}}</span>
+				</router-link>
+			</template>
 		</div>
 	</div>
 </template>
