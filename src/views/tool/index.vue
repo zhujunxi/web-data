@@ -7,11 +7,31 @@
 				<div class="tool-item-bd">
 					<el-row :gutter="20">
 						<el-col :span="4" v-for="citem,cindex of item.resource" :key="cindex">
-							<a :href="citem.link" class="tool-cell" target="_blank">
-								<!-- <img class="tool-cell-logo" :src="citem.logo" alt srcset /> -->
-								<div class="tool-cell-logo" :style="getLogoStyle()">{{citem.name | namaTransformLogo}}</div>
-								<div class="tool-cell-name">{{citem.name}}</div>
-							</a>
+							<template v-if="citem.link">
+								<a :href="citem.link" class="tool-cell" target="_blank">
+									<div class="tool-cell-logo" :style="getLogoStyle()">{{citem.name | namaTransformLogo}}</div>
+									<div class="tool-cell-name">{{citem.name}}</div>
+								</a>
+							</template>
+							<el-popover placement="top" trigger="hover" v-else-if="citem.QRCode">
+								<img
+									class="tool-popover-img"
+									v-if="!citem.link"
+									:src="require('@/assets/res/'+ citem.QRCode)"
+									alt
+									srcset
+								/>
+								<a slot="reference" class="tool-cell">
+									<div class="tool-cell-logo" :style="getLogoStyle()">{{citem.name | namaTransformLogo}}</div>
+									<div class="tool-cell-name">{{citem.name}}</div>
+								</a>
+							</el-popover>
+							<el-tooltip class="item" :content="citem.tip" effect="light" v-else-if="citem.tip">
+								<a class="tool-cell">
+									<div class="tool-cell-logo" :style="getLogoStyle()">{{citem.name | namaTransformLogo}}</div>
+									<div class="tool-cell-name">{{citem.name}}</div>
+								</a>
+							</el-tooltip>
 						</el-col>
 					</el-row>
 				</div>
@@ -77,7 +97,10 @@ export default {
 		padding: 24px 20px;
 	}
 }
-
+.tool-popover-img {
+	width: 160px;
+	height: 160px;
+}
 .tool-cell {
 	border: 1px solid rgba(0, 0, 0, 0.08);
 	border-radius: 2px;
@@ -86,6 +109,7 @@ export default {
 	align-items: center;
 	cursor: pointer;
 	text-decoration: none;
+	margin-bottom: 20px;
 	&-logo {
 		width: 30px;
 		height: 30px;
