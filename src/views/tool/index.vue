@@ -66,6 +66,9 @@ export default {
 
 <style lang="less" scoped>
 @import "~@/assets/style/variable.less";
+.tool-home {
+	background: #f3f7fe;
+}
 .tool-banner {
 	width: 100%;
 	height: 220px;

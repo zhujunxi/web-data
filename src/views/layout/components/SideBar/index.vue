@@ -11,6 +11,7 @@
 				:to="item.children[0].path"
 				tag="div"
 				v-for="item,index of routerMap"
+				v-if="!item.children[0].meta.hidden"
 				:key="index"
 			>
 				<i :class="item.children[0].meta.icon"></i>

@@ -1,4 +1,5 @@
 import Layout from "@/views/layout";
+import { hidden } from "ansi-colors";
 
 export default [
   {
@@ -30,5 +31,9 @@ export default [
         }
       }
     ]
+  },
+  {
+    path: "/chrome-tool",
+    component: () => import("@/views/tool/index.vue")
   }
 ];
