@@ -56,9 +56,6 @@ export default {
 			return pureVal.slice(0, 1);
 		}
 	},
-	mounted() {
-		console.log(this.getColor());
-	},
 	methods: {
 		getLogoStyle() {
 			return `background:rgb${generateColor()}`;
