@@ -56,6 +56,7 @@ export default {
 .el-menu-vertical-side {
 	background-color: #1b2b36;
 	color: rgba(255, 255, 255, 1);
+	border: none;
 	:hover {
 		background-color: #1b2b36;
 	}
