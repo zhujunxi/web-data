@@ -4,34 +4,36 @@
 			<img src="@/assets/logo.png" alt srcset />
 			<h1>Data System</h1>
 		</div>
-		<el-menu default-active="2" :collapse="false" class="el-menu-vertical-side">
-			<el-submenu index="1">
-				<template slot="title">
-					<i class="el-icon-location"></i>
-					<span>导航一</span>
-				</template>
-				<el-menu-item-group>
-					<template slot="title">分组一</template>
-					<el-menu-item index="1-1">选项1</el-menu-item>
-					<el-menu-item index="1-2">选项2</el-menu-item>
-				</el-menu-item-group>
-				<el-menu-item-group title="分组2">
-					<el-menu-item index="1-3">选项3</el-menu-item>
-				</el-menu-item-group>
-				<el-submenu index="1-4">
-					<template slot="title">选项4</template>
-					<el-menu-item index="1-4-1">选项1</el-menu-item>
-				</el-submenu>
-			</el-submenu>
-		</el-menu>
+		<div class="md-menu">
+			<router-link
+				class="md-menu-item"
+				:class="{active: activePath == item.children[0].path}"
+				:to="item.children[0].path"
+				tag="div"
+				v-for="item,index of routerMap"
+				:key="index"
+			>
+				<i :class="item.children[0].meta.icon"></i>
+				<span>{{item.children[0].meta.title}}</span>
+			</router-link>
+		</div>
 	</div>
 </template>
 
 <script>
+import routerMap from "@/router/module/routerMap";
 export default {
 	name: "",
 	data() {
-		return {};
+		return {
+			routerMap: routerMap,
+			activePath: this.$router.history.current.path
+		};
+	},
+	watch: {
+		$route(to, from) {
+			this.activePath = to.path;
+		}
 	}
 };
 </script>
@@ -53,12 +55,21 @@ export default {
 		font-size: 16px;
 	}
 }
-.el-menu-vertical-side {
-	background-color: #1b2b36;
-	color: rgba(255, 255, 255, 1);
-	border: none;
-	:hover {
-		background-color: #1b2b36;
+
+.md-menu {
+	.md-menu-item {
+		font-size: 16px;
+		padding: 16px 12px 16px 16px;
+		color: rgba(255, 255, 255, 0.7);
+		cursor: pointer;
+		&:hover,
+		&:active,
+		&.active {
+			background: #131e25;
+		}
+		span {
+			padding-left: 8px;
+		}
 	}
 }
 </style>

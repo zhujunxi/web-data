@@ -10,7 +10,8 @@ export default [
         path: "/",
         component: () => import("@/views/home/index.vue"),
         meta: {
-          title: "首页"
+          title: "首页",
+          icon: "el-icon-s-home"
         }
       }
     ]
@@ -24,7 +25,8 @@ export default [
         path: "/tool",
         component: () => import("@/views/tool/index.vue"),
         meta: {
-          title: "工具导航"
+          title: "工具导航",
+          icon: "el-icon-s-promotion"
         }
       }
     ]
