@@ -51,6 +51,24 @@ module.exports = [
     ]
   },
   {
+    value: "wechat",
+    label: "公众号",
+    resource: [
+      {
+        name: "乱翻书",
+        tip: "乱翻书"
+      },
+      {
+        name: "空手",
+        tip: "空手"
+      },
+      {
+        name: "分析师Charlie",
+        tip: "分析师Charlie"
+      }
+    ]
+  },
+  {
     value: "dataAnalysis",
     label: "数据分析",
     resource: [
