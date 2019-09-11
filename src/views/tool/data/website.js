@@ -47,6 +47,10 @@ module.exports = [
       {
         name: "ProcessOn",
         link: "https://www.processon.com"
+      },
+      {
+        name: "稿定设计",
+        link: "https://www.gaoding.com/"
       }
     ]
   },
@@ -65,6 +69,10 @@ module.exports = [
       {
         name: "分析师Charlie",
         tip: "分析师Charlie"
+      },
+      {
+        name: "君临",
+        tip: "君临"
       }
     ]
   },
