@@ -199,6 +199,10 @@ module.exports = [
         link: "http://www.ebrun.com/"
       },
       {
+        name: "派代网",
+        link: "http://www.paidai.com/"
+      },
+      {
         name: "店匠",
         link: "https://shoplazza.com/"
       },
