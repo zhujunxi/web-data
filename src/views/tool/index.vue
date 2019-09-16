@@ -5,8 +5,8 @@
 			<div class="tool-item" v-for="item,index of toolData" :key="index">
 				<div class="tool-item-hd">{{item.label}}</div>
 				<div class="tool-item-bd">
-					<el-row :gutter="20" type="flex" justify="start">
-						<el-col :span="4" v-for="citem,cindex of item.resource" :key="cindex">
+					<el-row :gutter="20" >
+						<el-col :span="3" v-for="citem,cindex of item.resource" :key="cindex">
 							<template v-if="citem.link">
 								<a :href="citem.link" class="tool-cell" target="_blank">
 									<div class="tool-cell-logo" :style="getLogoStyle()">{{citem.name | namaTransformLogo}}</div>
@@ -42,7 +42,7 @@
 
 <script>
 import toolData from "./data/website";
-import { generateColor } from "@/utils/utils";
+import { generateRgbaColor } from "@/utils/utils";
 export default {
 	data() {
 		return {
@@ -58,7 +58,7 @@ export default {
 	},
 	methods: {
 		getLogoStyle() {
-			return `background:rgb${generateColor()}`;
+			return `background:${generateRgbaColor()}`;
 		}
 	}
 };
@@ -68,6 +68,8 @@ export default {
 @import "~@/assets/style/variable.less";
 .tool-home {
 	background: #f3f7fe;
+	width: 1200px;
+	margin: 0 auto;
 }
 .tool-banner {
 	width: 100%;
@@ -83,15 +85,14 @@ export default {
 .tool-item {
 	background: #fff;
 	border-radius: 2px;
-	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
 	margin-bottom: 20px;
 	&-hd {
-		font-size: 16px;
+		font-size: 14px;
 		color: @primary-color;
 		display: flex;
 		justify-content: space-between;
-		padding: 16px 12px;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+		padding: 10px 12px 10px 12px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.02);
 	}
 	&-bd {
 		padding: 24px 20px;
@@ -102,33 +103,43 @@ export default {
 	height: 160px;
 }
 .tool-cell {
-	border: 1px solid rgba(0, 0, 0, 0.08);
-	border-radius: 2px;
-	padding: 16px 12px;
+	color: #666;
+	padding: 10px 6px;
 	display: flex;
 	align-items: center;
 	cursor: pointer;
 	text-decoration: none;
 	margin-bottom: 20px;
+	border-radius: 2px;
+	border: 1px solid rgba(0, 0, 0, 0.06);
+	transition: all .2s ease-in-out;
 	&-logo {
-		width: 30px;
-		height: 30px;
+		width: 20px;
+		height: 20px;
 		border: 2px solid rgba(0, 0, 0, 0.04);
 		border-radius: 50px;
-		line-height: 30px;
+		line-height: 20px;
 		text-align: center;
 		flex-shrink: 0;
-		font-size: 16px;
+		font-size: 12px;
 		font-weight: bold;
 		color: #fff;
+		text-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
 	}
 	&-name {
-		color: #666;
-		padding-left: 12px;
+		padding-left: 6px;
+		font-size: 14px;
+		font-weight: bold;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		
 	}
 	&:hover {
 		color: @primary-color;
-		box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.04);
+		border: 1px solid rgba(0, 0, 0, 0.12);
+		box-shadow: 0px 9px 7px -5px rgba(0, 0, 0, 0.08);
+		transition: all .2s ease-in-out;
 	}
 }
 </style>
