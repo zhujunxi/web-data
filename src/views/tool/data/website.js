@@ -25,6 +25,10 @@ module.exports = [
       {
         name: "亿邦动力",
         link: "http://www.ebrun.com/"
+      },
+      {
+        name: "鸟哥笔记",
+        link: "https://www.niaogebiji.com/"
       }
     ]
   },
@@ -73,6 +77,17 @@ module.exports = [
       {
         name: "君临",
         tip: "君临"
+      },
+      {
+        name: "罗超频道",
+        tip: "罗超频道"
+      },
+      {
+        name: "江小晚",
+        tip: "江小晚"
+      },{
+        name: "zhu上进",
+        tip: "思想随笔/行业研究<新媒体/新产品/新渠道/新技术=>新零售>/书单<技术与人文的结合>"
       }
     ]
   },
