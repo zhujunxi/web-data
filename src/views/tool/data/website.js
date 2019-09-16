@@ -19,16 +19,11 @@ module.exports = [
         link: "https://coffee.pmcaff.com/"
       },
       {
-        name: "白鲸出海",
-        link: "http://www.baijingapp.com/"
-      },
-      {
-        name: "亿邦动力",
-        link: "http://www.ebrun.com/"
-      },
-      {
         name: "鸟哥笔记",
         link: "https://www.niaogebiji.com/"
+      },{
+        name: "数据分析网",
+        link: "https://www.afenxi.com/"
       }
     ]
   },
@@ -55,6 +50,10 @@ module.exports = [
       {
         name: "稿定设计",
         link: "https://www.gaoding.com/"
+      },
+      {
+        name: "BDP-可视化数据分析",
+        link: "https://www.bdp.cn"
       }
     ]
   },
@@ -122,7 +121,35 @@ module.exports = [
       {
         name: "经管之家",
         link: "https://bbs.pinggu.org/"
+      },{
+        name: "QuestMobile",
+        link: "https://www.questmobile.com.cn/"
+      },
+      {
+        name: "cbnData 第一财经商数中心",
+        link: "http://www.cbndata.com"
+      },
+      {
+        name: "企鹅智酷",
+        link: "https://re.qq.com/"
+      },
+      {
+        name: "艾瑞网",
+        link: "https://www.iresearch.cn/"
+      },
+      {
+        name: "IBM商业价值研究院",
+        link: "https://www.ibm.com/cn-zh/services/insights/institute-business-value"
+      },
+      {
+        name: "腾讯位置大数据",
+        link: "https://heat.qq.com/"
+      },
+      {
+        name: "发现报告",
+        link: "https://www.fxbaogao.com"
       }
+
     ]
   },
   {
@@ -146,6 +173,10 @@ module.exports = [
         link: "https://index.toutiao.com"
       },
       {
+        name: "阿里指数",
+        link: "http://index.1688.com/"
+      },
+      {
         name: "微信搜索",
         tip: "手动打开微信-搜索"
       },
@@ -159,6 +190,14 @@ module.exports = [
     value: "eCommerce",
     label: "电商与自媒体",
     resource: [
+      {
+        name: "白鲸出海",
+        link: "http://www.baijingapp.com/"
+      },
+      {
+        name: "亿邦动力",
+        link: "http://www.ebrun.com/"
+      },
       {
         name: "店匠",
         link: "https://shoplazza.com/"
@@ -196,6 +235,10 @@ module.exports = [
       {
         name: "99抖商",
         link: "http://www.doushang99.com/"
+      },
+      {
+        name: "领库排行榜",
+        link: "https://www.kolrank.com/"
       }
     ]
   },
