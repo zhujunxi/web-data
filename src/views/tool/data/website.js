@@ -82,6 +82,10 @@ module.exports = [
         tip: "罗超频道"
       },
       {
+        name: "雕爷",
+        link: "雕爷"
+      },
+      {
         name: "江小晚",
         tip: "江小晚"
       },{
