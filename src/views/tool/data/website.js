@@ -58,6 +58,10 @@ module.exports = [
       {
         name: "阿里研究院",
         link: "http://www.aliresearch.com"
+      },
+      {
+        name: "清博数据-网址导航",
+        link: "http://hao.gsdata.cn/"
       }
     ]
   },
