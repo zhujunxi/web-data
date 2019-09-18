@@ -54,6 +54,10 @@ module.exports = [
       {
         name: "BDP-可视化数据分析",
         link: "https://www.bdp.cn"
+      },
+      {
+        name: "阿里研究院",
+        link: "http://www.aliresearch.com"
       }
     ]
   },
