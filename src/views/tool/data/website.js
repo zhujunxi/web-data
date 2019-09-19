@@ -21,9 +21,18 @@ module.exports = [
       {
         name: "鸟哥笔记",
         link: "https://www.niaogebiji.com/"
-      },{
+      },
+      {
+        name: "钛媒体",
+        link: "https://www.tmtpost.com/"
+      },
+      {
         name: "数据分析网",
         link: "https://www.afenxi.com/"
+      },
+      {
+        name:"商业人物",
+        link:"http://zixun.582582.com/tag/fangtan"
       }
     ]
   },
