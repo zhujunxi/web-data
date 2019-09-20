@@ -31,8 +31,8 @@ module.exports = [
         link: "https://www.afenxi.com/"
       },
       {
-        name:"商业人物",
-        link:"http://zixun.582582.com/tag/fangtan"
+        name: "商业人物",
+        link: "http://zixun.582582.com/tag/fangtan"
       }
     ]
   },
@@ -105,7 +105,7 @@ module.exports = [
       {
         name: "新零售脑砖家",
         tip: "新零售脑砖家"
-      },{
+      }, {
         name: "zhu上进",
         tip: "思想随笔/行业研究<新媒体/新产品/新渠道/新技术=>新零售>/书单<技术与人文的结合>"
       }
@@ -142,7 +142,7 @@ module.exports = [
       {
         name: "经管之家",
         link: "https://bbs.pinggu.org/"
-      },{
+      }, {
         name: "QuestMobile",
         link: "https://www.questmobile.com.cn/"
       },
@@ -256,6 +256,10 @@ module.exports = [
       {
         name: "新榜",
         link: "https://www.newrank.cn/"
+      },
+      {
+        name: "卡思数据",
+        link: "https://www.caasdata.com/index/rank/index.html"
       },
       {
         name: "99抖商",
