@@ -173,6 +173,10 @@ module.exports = [
       {
         name: "国家统计局年鉴数据",
         link: "http://www.stats.gov.cn/tjsj/ndsj/2017/indexch.htm"
+      },
+      {
+        name: "中国餐饮协会-数据报告",
+        link: "http://www.chinahotel.org.cn/forward/enterSecondDary.do?id=4a41851c14184c9495f3aad314fc4290&childMId1=4e28ce0583794d08a63c4036d336f5cc&moduleId=4e28ce0583794d08a63c4036d336f5cc"
       }
     ]
   },
