@@ -169,8 +169,11 @@ module.exports = [
       {
         name: "发现报告",
         link: "https://www.fxbaogao.com"
+      },
+      {
+        name: "国家统计局年鉴数据",
+        link: "http://www.stats.gov.cn/tjsj/ndsj/2017/indexch.htm"
       }
-
     ]
   },
   {
@@ -196,6 +199,10 @@ module.exports = [
       {
         name: "阿里指数",
         link: "http://index.1688.com/"
+      },
+      {
+        name: "360趋势",
+        link: "https://trends.so.com/"
       },
       {
         name: "微信搜索",
