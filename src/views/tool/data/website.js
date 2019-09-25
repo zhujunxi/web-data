@@ -215,6 +215,10 @@ module.exports = [
       {
         name: "微信指数小程序",
         QRCode: "wechatIndex.png"
+      },
+      {
+        name: "阿拉丁小程序指数",
+        link: "http://www.aldzs.com/"
       }
     ]
   },
