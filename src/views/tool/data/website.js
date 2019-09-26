@@ -37,6 +37,10 @@ module.exports = [
       {
         name: "人人都是产品经理",
         link: "http://www.woshipm.com/"
+      },
+      {
+        name: "前瞻经济学人",
+        link: "https://t.qianzhan.com/"
       }
     ]
   },
@@ -305,6 +309,16 @@ module.exports = [
       {
         name: "至顶网",
         link: "http://www.zhiding.cn/"
+      }
+    ]
+  },
+  {
+    value: "program",
+    label: "技术",
+    resource: [
+      {
+        name: "我爱自然语言处理",
+        link: "http://www.52nlp.cn/"
       }
     ]
   }
