@@ -150,9 +150,14 @@ module.exports = [
       {
         name: "经管之家",
         link: "https://bbs.pinggu.org/"
-      }, {
+      },
+      {
         name: "QuestMobile",
         link: "https://www.questmobile.com.cn/"
+      },
+      {
+        name: "Mob数据研究院",
+        link: "http://www.mob.com/mobdata/report"
       },
       {
         name: "cbnData 第一财经商数中心",
