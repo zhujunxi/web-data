@@ -5,7 +5,7 @@
 			<div class="tool-item" v-for="item,index of toolData" :key="index">
 				<div class="tool-item-hd">{{item.label}}</div>
 				<div class="tool-item-bd">
-					<el-row :gutter="20" >
+					<el-row :gutter="20">
 						<el-col :span="3" v-for="citem,cindex of item.resource" :key="cindex">
 							<template v-if="citem.link">
 								<a :href="citem.link" class="tool-cell" target="_blank">
@@ -68,18 +68,20 @@ export default {
 @import "~@/assets/style/variable.less";
 .tool-home {
 	background: #f3f7fe;
-	width: 1200px;
-	margin: 0 auto;
+	width: 100%;
 }
 .tool-banner {
-	width: 100%;
+	width: 1200px;
 	height: 220px;
-	background: rgba(0, 0, 0, 0.18);
+	margin: 0 auto;
+	background: rgba(0, 0, 0, 0.04);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .tool-item-warp {
+	width: 1200px;
+	margin: 0 auto;
 	padding: 12px;
 }
 .tool-item {
@@ -112,7 +114,7 @@ export default {
 	margin-bottom: 20px;
 	border-radius: 2px;
 	border: 1px solid rgba(0, 0, 0, 0.06);
-	transition: all .2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 	&-logo {
 		width: 20px;
 		height: 20px;
@@ -133,13 +135,12 @@ export default {
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
-		
 	}
 	&:hover {
 		color: @primary-color;
 		border: 1px solid rgba(0, 0, 0, 0.12);
 		box-shadow: 0px 9px 7px -5px rgba(0, 0, 0, 0.08);
-		transition: all .2s ease-in-out;
+		transition: all 0.2s ease-in-out;
 	}
 }
 </style>
