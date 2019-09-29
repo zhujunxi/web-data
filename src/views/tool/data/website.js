@@ -264,6 +264,10 @@ module.exports = [
         link: "https://www.xorder.com.cn/"
       },
       {
+        name: "亚马逊船长BI",
+        link: "www.captainbi.com"
+      },
+      {
         name: "雨果网",
         link: "https://www.cifnews.com/"
       },
