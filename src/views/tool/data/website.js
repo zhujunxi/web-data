@@ -120,6 +120,16 @@ module.exports = [
     ]
   },
   {
+    value: "zhihu",
+    label: "知乎",
+    resource: [
+      {
+        name: "航通社",
+        link: "https://zhuanlan.zhihu.com/lishuhang"
+      }
+    ]
+  },
+  {
     value: "dataAnalysis",
     label: "数据分析",
     resource: [
