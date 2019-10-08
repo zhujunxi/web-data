@@ -23,6 +23,10 @@ module.exports = [
         link: "https://www.niaogebiji.com/"
       },
       {
+        name: "青瓜传媒",
+        link: "http://www.opp2.com/"
+      },
+      {
         name: "钛媒体",
         link: "https://www.tmtpost.com/"
       },
