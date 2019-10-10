@@ -23,6 +23,10 @@ module.exports = [
         link: "https://www.niaogebiji.com/"
       },
       {
+        name: "华杉的新浪博客",
+        link: "http://blog.sina.com.cn/hua20081231"
+      },
+      {
         name: "青瓜传媒",
         link: "http://www.opp2.com/"
       },
