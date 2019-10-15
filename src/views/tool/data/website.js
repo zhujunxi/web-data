@@ -255,7 +255,7 @@ module.exports = [
   },
   {
     value: "eCommerce",
-    label: "电商与自媒体",
+    label: "电商",
     resource: [
       {
         name: "白鲸出海",
