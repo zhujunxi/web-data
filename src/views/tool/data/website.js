@@ -1,7 +1,7 @@
 module.exports = [
   {
     value: "news",
-    label: "资讯",
+    label: "资讯888888888888888888888888888888888888888",
     resource: [
       {
         name: "36氪",
