@@ -344,6 +344,9 @@ module.exports = [
       {
         name: "至顶网",
         link: "http://www.zhiding.cn/"
+      },{
+        name: "销售家-销帮",
+        link: "http://www.xiaoshoujia.com.cn/"
       }
     ]
   },
