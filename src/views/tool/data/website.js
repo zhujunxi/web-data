@@ -27,6 +27,10 @@ module.exports = [
         link: "https://www.digitaling.com/"
       },
       {
+        name: "新媒之家",
+        link: "https://www.xinmei6.com/"
+      },
+      {
         name: "华杉的新浪博客",
         link: "http://blog.sina.com.cn/hua20081231"
       },
