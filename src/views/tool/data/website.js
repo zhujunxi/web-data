@@ -182,6 +182,10 @@ module.exports = [
         link: "https://www.questmobile.com.cn/"
       },
       {
+        name: "烯牛数据",
+        link: "http://www.xiniudata.com/"
+      },
+      {
         name: "Mob数据研究院",
         link: "http://www.mob.com/mobdata/report"
       },
