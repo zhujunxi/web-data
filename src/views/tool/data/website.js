@@ -95,6 +95,10 @@ module.exports = [
       {
         name: "清博数据-网址导航",
         link: "http://hao.gsdata.cn/"
+      },
+      {
+        name: "魔筷-电商选品",
+        link: "http://www.mockuai.com/"
       }
     ]
   },
