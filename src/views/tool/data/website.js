@@ -194,7 +194,7 @@ module.exports = [
         link: "http://www.mob.com/mobdata/report"
       },
       {
-        name: "cbnData 第一财经商数中心",
+        name: "cbnData 第一财经商数中心 ★",
         link: "http://www.cbndata.com"
       },
       {
