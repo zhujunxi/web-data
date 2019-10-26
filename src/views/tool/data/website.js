@@ -162,10 +162,6 @@ module.exports = [
         link: "https://appgrowing.cn/"
       },
       {
-        name: "飞瓜数据",
-        link: "https://www.feigua.cn/"
-      },
-      {
         name: "新榜有数",
         link: "https://data.newrank.cn/"
       },
@@ -326,6 +322,14 @@ module.exports = [
       {
         name: "卡思数据",
         link: "https://www.caasdata.com/index/rank/index.html"
+      },
+      {
+        name: "罗网",
+        link: "https://www.luonet.com"
+      },
+      {
+        name: "飞瓜数据",
+        link: "https://www.feigua.cn/"
       },
       {
         name: "99抖商",
