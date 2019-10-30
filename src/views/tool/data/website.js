@@ -23,6 +23,10 @@ module.exports = [
         link: "https://www.niaogebiji.com/"
       },
       {
+        name: "笔记侠",
+        link: "https://www.bijixia.net"
+      },
+      {
         name: "数英网",
         link: "https://www.digitaling.com/"
       },
