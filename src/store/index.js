@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import index from "./modules/index";
 import common from "./modules/common";
 
 import getters from "./getters";
@@ -12,6 +13,7 @@ export default new Vuex.Store({
   mutations: {},
   actions: {},
   modules: {
+    index,
     common
   }
 });
