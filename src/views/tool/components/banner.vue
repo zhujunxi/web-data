@@ -1,7 +1,7 @@
 <template>
-    <div class="tool-banner">
+    <div class="tool-banner" v-if="loading" >
         <div class="banner-back" :style="{backgroundImage: 'url(' + bannerRes.imgUrl + ')' }"></div>
-        <img class="banner-img" v-if="bannerRes.imgUrl" :src="bannerRes.imgUrl" @click="dialogTableVisible = true" alt="" srcset="">
+        <img class="banner-img" :src="bannerRes.imgUrl" @click="dialogTableVisible = true" alt="" srcset="">
         <div class="banner-slogan">{{bannerRes.content}}</div>
         
         <el-dialog  :visible.sync="dialogTableVisible">
@@ -18,16 +18,17 @@ export default {
     name: '',
     data() {
         return {
+            loading: false,
             bannerRes: {},
             dialogTableVisible: false
         }
     },
     created() {
         this.loadingInstance = Loading.service({
-                target: ".tool-banner",
-                spinner: "el-icon-loading",
-                background: "#f3f7fe"
-            })
+            target: ".tool-banner",
+            spinner: "el-icon-loading",
+            background: "#f3f7fe"
+        })
     },
     mounted() {
         this.init()
@@ -39,8 +40,10 @@ export default {
             this.getOneRandom().then(res => {
                 this.bannerRes = res
                 this.loadingInstance.close();
+                this.loading = true
             }).catch(err => {
                 this.loadingInstance.close();
+                this.loading = true
             })
         }
 	}
