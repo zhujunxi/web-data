@@ -1,7 +1,7 @@
 <template>
     <div class="tool-banner" v-if="loading" >
         <div class="banner-back" :style="{backgroundImage: 'url(' + bannerRes.imgUrl + ')' }"></div>
-        <img class="banner-img" :src="bannerRes.imgUrl" @click="dialogTableVisible = true" alt="" srcset="">
+        <img class="banner-img" :src="bannerRes.imgUrl" @click="dialogTableVisible = true">
         <div class="banner-slogan">{{bannerRes.content}}</div>
         
         <el-dialog  :visible.sync="dialogTableVisible">
@@ -38,7 +38,9 @@ export default {
         init() {
             
             this.getOneRandom().then(res => {
-                this.bannerRes = res
+                this.bannerRes = {...res,
+                    imgUrl: "//image.wufazhuce.com/Fhirla-xP9HtlQwvEM10W9mTQ-5X"
+                }
                 this.loadingInstance.close();
                 this.loading = true
             }).catch(err => {
