@@ -1,7 +1,7 @@
 <template>
     <div class="tool-banner">
         <div class="banner-back" :style="{backgroundImage: 'url(' + bannerRes.imgUrl + ')' }"></div>
-        <img class="banner-img" :src="bannerRes.imgUrl" @click="dialogTableVisible = true" alt="" srcset="">
+        <img class="banner-img" v-if="bannerRes.imgUrl" :src="bannerRes.imgUrl" @click="dialogTableVisible = true" alt="" srcset="">
         <div class="banner-slogan">{{bannerRes.content}}</div>
         
         <el-dialog  :visible.sync="dialogTableVisible">
