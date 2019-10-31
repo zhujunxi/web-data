@@ -8,7 +8,8 @@ import {
   Row,
   Col,
   Popover,
-  Tooltip
+  Tooltip,
+  Dialog
 } from "element-ui";
 
 Vue.use(Button);
@@ -20,5 +21,6 @@ Vue.use(Row);
 Vue.use(Col);
 Vue.use(Popover);
 Vue.use(Tooltip);
+Vue.use(Dialog);
 
 import "@/assets/style/theme.less";

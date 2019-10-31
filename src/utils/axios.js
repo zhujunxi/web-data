@@ -61,34 +61,37 @@ class HttpRequest {
             res => {
                 this.destroy(url)
                 const { data, status } = res
+                console.log(res);
+                
                 if (status !== 200) {
                     Message.error({
-                        content: data.message || '服务器网络异常，请重试',
-                        duration: 4
+                        content: data.message || '服务器网络异常，请重试'
                     })
                     return
-                }
-                if (data.code == 10000004 || data.code == 10000005 || data.code == 10000006 || data.code == 10000007) {
-                    if (router.app._route.path !== '/login') {
-                        store.dispatch('handleLogOut').then(() => {
-                            location.href = `${location.origin}#/login`
-                            setTimeout(() => {
-                                location.reload()
-                            }, 200)
-                        })
-                    }
-                } else if (data.code == 10000008) {
-                    router.push('/404')
-                }
-                if (data.code !== 0) {
-                    Message.error({
-                        content: data.message || '网络异常，请刷新重试',
-                        duration: 4
-                    })
-                    return Promise.reject(res)
-                } else {
+                }else {
                     return { data, status }
                 }
+                // if (data.code == 10000004 || data.code == 10000005 || data.code == 10000006 || data.code == 10000007) {
+                //     if (router.app._route.path !== '/login') {
+                //         store.dispatch('handleLogOut').then(() => {
+                //             location.href = `${location.origin}#/login`
+                //             setTimeout(() => {
+                //                 location.reload()
+                //             }, 200)
+                //         })
+                //     }
+                // } else if (data.code == 10000008) {
+                //     router.push('/404')
+                // }
+                // if (data.code !== 0) {
+                //     Message.error({
+                //         content: data.message || '网络异常，请刷新重试',
+                //         duration: 4
+                //     })
+                //     return Promise.reject(res)
+                // } else {
+                //     return { data, status }
+                // }
             },
             error => {
                 this.destroy(url)

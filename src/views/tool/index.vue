@@ -1,14 +1,14 @@
 <template>
 	<div class="tool-home">
-		<div class="tool-banner">搜索</div>
+		<Banner></Banner>
 		<div class="tool-item-warp">
 			<div class="tool-item" v-for="item,index of toolData" :key="index">
 				<div class="tool-item-hd">{{item.label}}</div>
 				<div class="tool-item-bd">
 					<el-row :gutter="20">
-						<el-col :span="3" v-for="citem,cindex of item.resource" :key="cindex">
+						<el-col :span="4" v-for="citem,cindex of item.resource" :key="cindex">
 							<template v-if="citem.link">
-								<a :href="citem.link" class="tool-cell" target="_blank">
+								<a :href="citem.link" class="tool-cell" target="_blank" :title="citem.name">
 									<div class="tool-cell-logo" :style="getLogoStyle()">{{citem.name | namaTransformLogo}}</div>
 									<div class="tool-cell-name">{{citem.name}}</div>
 								</a>
@@ -41,9 +41,15 @@
 </template>
 
 <script>
+import Banner from "./components/banner"
+
 import toolData from "./data/website";
 import { generateRgbaColor } from "@/utils/utils";
+
 export default {
+	components: {
+		Banner
+	},
 	data() {
 		return {
 			toolData: toolData
@@ -70,26 +76,20 @@ export default {
 	background: #f3f7fe;
 	width: 100%;
 }
-.tool-banner {
-	width: 1200px;
-	height: 220px;
-	margin: 0 auto;
-	background: rgba(0, 0, 0, 0.04);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+
 .tool-item-warp {
 	width: 1200px;
 	margin: 0 auto;
+	transform: translateY(-46px);
 	padding: 12px;
-}
-.tool-item {
 	background: #fff;
 	border-radius: 2px;
-	margin-bottom: 20px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.tool-item {
 	&-hd {
-		font-size: 14px;
+		font-size: 16px;
+		font-weight: bold;
 		color: @primary-color;
 		display: flex;
 		justify-content: space-between;
@@ -106,7 +106,7 @@ export default {
 }
 .tool-cell {
 	color: #666;
-	padding: 10px 6px;
+	padding: 14px 8px;
 	display: flex;
 	align-items: center;
 	cursor: pointer;
