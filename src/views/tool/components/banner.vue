@@ -39,7 +39,7 @@ export default {
             
             this.getOneRandom().then(res => {
                 this.bannerRes = {...res,
-                    imgUrl: "//image.wufazhuce.com/Fhirla-xP9HtlQwvEM10W9mTQ-5X"
+                    // imgUrl: "//image.wufazhuce.com/Fhirla-xP9HtlQwvEM10W9mTQ-5X"
                 }
                 this.loadingInstance.close();
                 this.loading = true
