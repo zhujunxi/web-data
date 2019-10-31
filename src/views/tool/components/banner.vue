@@ -85,7 +85,7 @@ export default {
     line-height: 24px;
     text-align: center;
     padding: 22px 120px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,.2)
+    text-shadow: 1px 1px 2px rgba(0,0,0,.3)
 }
 .banner-back{
     background-repeat: no-repeat;
