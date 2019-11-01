@@ -1,7 +1,7 @@
 <template>
     <div class="tool-banner">
-        <div class="banner-back" v-if="loading" :style="{backgroundImage: 'url(' + bannerRes.imgUrl + ')' }"></div>
-        <img class="banner-img" v-if="loading" :src="bannerRes.imgUrl" @click="dialogTableVisible = true">
+        <div class="banner-back" v-if="init" :style="{backgroundImage: 'url(' + bannerRes.imgUrl + ')' }"></div>
+        <img class="banner-img" v-if="init" :src="bannerRes.imgUrl" @click="dialogTableVisible = true">
         <div class="banner-slogan">{{bannerRes.content}}</div>
         
         <el-dialog  :visible.sync="dialogTableVisible">
@@ -24,32 +24,31 @@ export default {
     name: '',
     data() {
         return {
+            init: false,
             loading: false,
             bannerRes: {},
             dialogTableVisible: false
         }
     },
     mounted() {
-        this.init()
+        this.loadingInstance = Loading.service({
+            target: ".tool-banner",
+            spinner: "el-icon-loading",
+            background: "#f3f7fe"
+        })
+        this.handleChangeBanner()
     },
     methods: {
         ...mapActions(['getOneRandom']),
-        init() {
-            this.loadingInstance = Loading.service({
-                target: ".tool-banner",
-                spinner: "el-icon-loading",
-                background: "#f3f7fe"
-            })
-            this.handleChangeBanner()
-        },
         handleChangeBanner() {
             this.loading = false
             this.getOneRandom().then(res => {
+                this.init = true
                 setTimeout(() => {
                     this.bannerRes = res
                     this.loadingInstance.close();
                     this.loading = true
-                }, 6000)
+                }, 0)
             }).catch(err => {
                 this.loadingInstance.close();
                 this.loading = true
@@ -89,11 +88,13 @@ export default {
     z-index: 10;
 }
 .banner-slogan{
+    width: 1200px;
+    box-sizing: border-box;
     color: #fff;
     opacity: .8;
     line-height: 24px;
     text-align: center;
-    padding: 22px 120px;
+    padding: 22px 60px;
     text-shadow: 1px 1px 2px rgba(0,0,0,.3)
 }
 .banner-back{
