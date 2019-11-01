@@ -61,7 +61,6 @@ class HttpRequest {
             res => {
                 this.destroy(url)
                 const { data, status } = res
-                console.log(res);
                 
                 if (status !== 200) {
                     Message.error({

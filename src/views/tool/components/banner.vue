@@ -7,6 +7,12 @@
         <el-dialog  :visible.sync="dialogTableVisible">
             <img :src="bannerRes.imgUrl" @click="dialogTableVisible = true" style="width:100%;height:100%;">
         </el-dialog>
+        <div class="banner-change">
+            <el-tooltip v-if="loading" class="item" effect="dark" content="随机切换" placement="bottom">
+                <div class="flash-btn" @click="handleChangeBanner()"></div>
+            </el-tooltip>
+            <i class="el-icon-loading" v-if="!loading" style="font-size:18px;color:rgba(255,255,255,.6);"></i>
+        </div>
     </div>
 </template>
 
@@ -23,24 +29,27 @@ export default {
             dialogTableVisible: false
         }
     },
-    created() {
-        this.loadingInstance = Loading.service({
-            target: ".tool-banner",
-            spinner: "el-icon-loading",
-            background: "#f3f7fe"
-        })
-    },
     mounted() {
         this.init()
     },
     methods: {
         ...mapActions(['getOneRandom']),
         init() {
-            
+            this.loadingInstance = Loading.service({
+                target: ".tool-banner",
+                spinner: "el-icon-loading",
+                background: "#f3f7fe"
+            })
+            this.handleChangeBanner()
+        },
+        handleChangeBanner() {
+            this.loading = false
             this.getOneRandom().then(res => {
-                this.bannerRes = res
-                this.loadingInstance.close();
-                this.loading = true
+                setTimeout(() => {
+                    this.bannerRes = res
+                    this.loadingInstance.close();
+                    this.loading = true
+                }, 6000)
             }).catch(err => {
                 this.loadingInstance.close();
                 this.loading = true
@@ -98,5 +107,55 @@ export default {
     z-index: 0;
     filter: blur(12px);
     opacity: .9;
+}
+.banner-change{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+.flash-btn{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.flash-btn::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+    border-radius: 50px;
+    animation: before 2s infinite ease-in-out alternate;
+}
+.flash-btn::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+    border-radius: 50px;
+    animation: after 2s infinite ease-in-out alternate;
+}
+
+@keyframes before {
+    0%   {
+        transform: scale(.3)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+@keyframes after {
+    0%   {
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(.3)
+    }
 }
 </style>
