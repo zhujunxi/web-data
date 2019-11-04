@@ -15,6 +15,10 @@ module.exports = [
         logo: ""
       },
       {
+        name: "猎云网",
+        link: "https://www.lieyunwang.com/"
+      },
+      {
         name: "PM-CAFF",
         link: "https://coffee.pmcaff.com/"
       },
