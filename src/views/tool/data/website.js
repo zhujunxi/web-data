@@ -312,6 +312,10 @@ module.exports = [
       {
         name: "千里眼",
         link: "http://www.qly360.com/"
+      },
+      {
+        name: "电商导航",
+        link: "https://www.amz520.com/"
       }
     ]
   },
