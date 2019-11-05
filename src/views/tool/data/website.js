@@ -136,7 +136,7 @@ module.exports = [
       },
       {
         name: "雕爷",
-        link: "雕爷"
+        tip: "雕爷"
       },
       {
         name: "新零售脑砖家",
