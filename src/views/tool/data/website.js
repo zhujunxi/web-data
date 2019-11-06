@@ -303,7 +303,7 @@ module.exports = [
       },
       {
         name: "亚马逊船长BI",
-        link: "www.captainbi.com"
+        link: "https://www.captainbi.com"
       },
       {
         name: "雨果网",
