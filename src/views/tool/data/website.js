@@ -15,6 +15,10 @@ module.exports = [
         logo: ""
       },
       {
+        name: "星球节点",
+        link: "https://www.odaily.com/"
+      },
+      {
         name: "猎云网",
         link: "https://www.lieyunwang.com/"
       },
