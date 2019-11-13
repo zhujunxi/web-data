@@ -106,6 +106,7 @@ export default {
 }
 .tool-cell {
 	color: #666;
+	background: #ecf5ff5c;
 	padding: 14px 8px;
 	display: flex;
 	align-items: center;
@@ -113,7 +114,7 @@ export default {
 	text-decoration: none;
 	margin-bottom: 20px;
 	border-radius: 2px;
-	border: 1px solid rgba(0, 0, 0, 0.06);
+	border: 1px solid rgba(0, 0, 0, 0.04);
 	transition: all 0.2s ease-in-out;
 	&-logo {
 		width: 20px;
