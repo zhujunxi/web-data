@@ -9,7 +9,12 @@
 						<el-col :span="4" v-for="citem,cindex of item.resource" :key="cindex">
 							<template v-if="citem.link">
 								<a :href="citem.link" class="tool-cell" target="_blank" :title="citem.name">
-									<div class="tool-cell-logo" :style="getLogoStyle()">{{citem.name | namaTransformLogo}}</div>
+									<img
+										class="tool-cell-logo"
+										:src="citem.logo"
+										v-if="citem.logo"
+									/>
+									<div class="tool-cell-logo-text" v-else :style="getLogoStyle()">{{citem.name | namaTransformLogo}}</div>
 									<div class="tool-cell-name">{{citem.name}}</div>
 								</a>
 							</template>
@@ -107,7 +112,7 @@ export default {
 .tool-cell {
 	color: #666;
 	background: #ecf5ff5c;
-	padding: 14px 8px;
+	padding: 10px 8px;
 	display: flex;
 	align-items: center;
 	cursor: pointer;
@@ -117,14 +122,18 @@ export default {
 	border: 1px solid rgba(0, 0, 0, 0.04);
 	transition: all 0.2s ease-in-out;
 	&-logo {
-		width: 20px;
-		height: 20px;
-		border: 2px solid rgba(0, 0, 0, 0.04);
+		width: 28px;
+		height: 28px;
 		border-radius: 50px;
-		line-height: 20px;
+	}
+	&-logo-text {
+		width: 28px;
+		height: 28px;
+		border-radius: 50px;
+		line-height: 28px;
 		text-align: center;
 		flex-shrink: 0;
-		font-size: 12px;
+		font-size: 14px;
 		font-weight: bold;
 		color: #fff;
 		text-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
