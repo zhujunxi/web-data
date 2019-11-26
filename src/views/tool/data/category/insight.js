@@ -15,6 +15,10 @@ export default [
     link: "https://data.newrank.cn/"
   },
   {
+    name: "微小宝-运营数据洞察",
+    link: "https://data.wxb.com/"
+  },
+  {
     name: "易观智库",
     link: "https://growth.analysys.cn/dashboard/detail/399"
   },
