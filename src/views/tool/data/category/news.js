@@ -40,6 +40,9 @@ export default [
     {
       name: "新媒之家",
       link: "https://www.xinmei6.com/"
+    },{
+      name: "运营派",
+      link: "https://www.yunyingpai.com/"
     },
     {
       name: "华杉的新浪博客",
