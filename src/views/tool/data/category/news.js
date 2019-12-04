@@ -18,6 +18,10 @@ export default [
     link: "https://www.odaily.com/"
   },
   {
+    name: "财新",
+    link: "http://www.caixin.com/"
+  },
+  {
     name: "猎云网",
     link: "https://www.lieyunwang.com/"
   },
