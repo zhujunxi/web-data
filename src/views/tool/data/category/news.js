@@ -14,7 +14,7 @@ export default [
     logo: ""
   },
   {
-    name: "星球节点",
+    name: "星球日报",
     link: "https://www.odaily.com/"
   },
   {
