@@ -9,6 +9,10 @@ export default [
       "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573741193726&di=8cb38619a078a2b0a1c00af61c1f416d&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fb8ab63f23c5c2daccf4d3dc58ba8ad4a20a92b7110377-GSjq7f_fw658"
   },
   {
+    name: "百度",
+    link: "https://www.baidu.com"
+  },
+  {
     name: "虎嗅",
     link: "https://www.huxiu.com/",
     logo: ""
