@@ -72,8 +72,7 @@ export default [
   {
     name: "前瞻经济学人",
     link: "https://t.qianzhan.com/"
-  },
-  {
+  }, {
     name: "V2EX",
     link: "https://www.v2ex.com/"
   }
