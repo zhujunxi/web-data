@@ -68,8 +68,7 @@ export default [
   {
     name: "人人都是产品经理",
     link: "http://www.woshipm.com/"
-  },
-  {
+  }, {
     name: "前瞻经济学人",
     link: "https://t.qianzhan.com/"
   }, {
