@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve --port 8088",
     "build": "vue-cli-service build",
+    "precommit": "pretty-quick --staged",
     "push": "bash add-website.sh"
   },
   "dependencies": {
@@ -23,7 +24,8 @@
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "vue-cli-plugin-element": "^1.0.1",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "prettier": "^1.19.1"
   },
   "postcss": {
     "plugins": {
