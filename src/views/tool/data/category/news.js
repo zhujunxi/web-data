@@ -42,9 +42,6 @@ export default [
     link: "https://www.digitaling.com/"
   },
   {
-    name: "新媒之家",
-    link: "https://www.xinmei6.com/"
-  }, {
     name: "运营派",
     link: "https://www.yunyingpai.com/"
   },
