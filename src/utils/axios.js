@@ -25,9 +25,9 @@ class HttpRequest {
     }
     getInsideConfig() {
         const config = {
-            baseURL: this.baseUrl,
+            // baseURL: this.baseUrl,
             headers: {
-                token: 'token'// getToken()
+                token: 'token' // getToken()
             },
             timeout: 100000
         }
@@ -61,13 +61,13 @@ class HttpRequest {
             res => {
                 this.destroy(url)
                 const { data, status } = res
-                
+
                 if (status !== 200) {
                     Message.error({
                         content: data.message || '服务器网络异常，请重试'
                     })
                     return
-                }else {
+                } else {
                     return { data, status }
                 }
                 // if (data.code == 10000004 || data.code == 10000005 || data.code == 10000006 || data.code == 10000007) {
