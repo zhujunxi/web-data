@@ -31,6 +31,10 @@ export default [
         link: 'https://www.moyu.link'
     },
     {
+        name: '增长黑客-网址导航',
+        link: 'https://www.growthhk.cn/channel'
+    },
+    {
         name: '99抖商',
         link: 'http://www.doushang99.com/'
     },
