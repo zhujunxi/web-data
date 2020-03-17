@@ -39,6 +39,10 @@ export default [
         link: 'http://www.doushang99.com/'
     },
     {
+        name: '抖大大',
+        link: 'https://www.doudada.com/'
+    },
+    {
         name: '领库排行榜',
         link: 'https://www.kolrank.com/'
     }
