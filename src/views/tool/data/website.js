@@ -11,7 +11,7 @@ import Program from './category/program'
 
 export default [
     {
-        label: '资讯-',
+        label: '资讯',
         resource: News
     },
     {
