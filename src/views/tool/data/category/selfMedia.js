@@ -23,6 +23,10 @@ export default [
         link: 'https://www.feigua.cn/'
     },
     {
+        name: '微小宝数据',
+        link: 'https://www.wxb.com/'
+    },
+    {
         name: '考拉新媒体导航',
         link: 'https://www.kaolamedia.com'
     },
