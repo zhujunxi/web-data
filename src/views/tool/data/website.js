@@ -8,6 +8,7 @@ import ECommerce from './category/eCommerce'
 import SelfMedia from './category/selfMedia'
 import Marketing from './category/marketing'
 import Program from './category/program'
+import Company from './category/company'
 
 export default [
     {
@@ -17,6 +18,10 @@ export default [
     {
         label: '工具',
         resource: Tool
+    },
+    {
+        label: '项目',
+        resource: Company
     },
     {
         label: '数据与指数',
