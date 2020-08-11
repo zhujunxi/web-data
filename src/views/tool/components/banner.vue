@@ -13,6 +13,9 @@
             </el-tooltip>
             <i class="el-icon-loading" v-if="!loading" style="font-size:18px;color:rgba(255,255,255,.6);"></i>
         </div>
+        <div class="banner-maximize" v-if="showMaximize">
+            <router-link class="el-icon-full-screen" to="/chrome-tool" tag="i"> </router-link>
+        </div>
     </div>
 </template>
 
@@ -27,7 +30,8 @@ export default {
             init: false,
             loading: false,
             bannerRes: {},
-            dialogTableVisible: false
+            dialogTableVisible: false,
+            showMaximize: false
         }
     },
     mounted() {
@@ -40,6 +44,7 @@ export default {
         this.getOneRandomTencentCloud().then(res => {
             console.log(res)
         })
+        this.showMaximize = this.$route.path == '/tool'
     },
     methods: {
         ...mapActions(['getOneRandom', 'getOneRandomTencentCloud']),
@@ -120,6 +125,17 @@ export default {
     position: absolute;
     right: 50px;
     top: 50px;
+}
+.banner-maximize {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 50px;
+    bottom: 80px;
+    i {
+        color: #fff;
+        cursor: pointer;
+    }
 }
 .flash-btn {
     width: 20px;
