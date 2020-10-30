@@ -16,6 +16,7 @@
         <div class="banner-maximize" v-if="showMaximize">
             <router-link class="el-icon-full-screen" to="/chrome-tool" tag="i"> </router-link>
         </div>
+        1
     </div>
 </template>
 
